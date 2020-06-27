@@ -17,7 +17,7 @@ import lombok.ToString;
 public class TipoCozinha {
 
 	@Id
-	@Column(name = "codigo")
+	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long uuidTipoCozinha;
 	

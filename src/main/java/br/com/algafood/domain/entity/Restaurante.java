@@ -1,11 +1,13 @@
 package br.com.algafood.domain.entity;
 
 import java.math.BigDecimal;
-import java.util.UUID;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.Getter;
@@ -16,8 +18,9 @@ import lombok.Getter;
 public class Restaurante {
 
 	@Id
-	@Column(name = "codigo")
-	private UUID uuidRestaurante;
+	@Column(name = "id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long uuidRestaurante;
 	
 	@Column(name = "nome_restaurante")
 	private String nomeRestaurante;
@@ -25,7 +28,10 @@ public class Restaurante {
 	@Column(name = "taxa_frete")
 	private BigDecimal TaxaFrete;
 
-	public Restaurante(UUID uuidRestaurante, String nomeRestaurante, BigDecimal taxaFrete) {
+	@ManyToOne
+	private TipoCozinha tipoCozinha;
+
+	public Restaurante(Long uuidRestaurante, String nomeRestaurante, BigDecimal taxaFrete) {
 		super();
 		this.uuidRestaurante = uuidRestaurante;
 		this.nomeRestaurante = nomeRestaurante;
@@ -38,4 +44,5 @@ public class Restaurante {
 		TaxaFrete = taxaFrete;
 	}
 		
+	public Restaurante() {}
 }
