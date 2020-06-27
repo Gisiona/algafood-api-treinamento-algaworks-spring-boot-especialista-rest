@@ -19,18 +19,18 @@ import lombok.Getter;
 public class Restaurante {
 
 	@Id
-	@Column(name = "id")
+	@Column(name = "id", nullable = false)
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long uuidRestaurante;
 	
-	@Column(name = "nome_restaurante")
+	@Column(name = "nome_restaurante", nullable = false)
 	private String nomeRestaurante;
 	
-	@Column(name = "taxa_frete")
+	@Column(name = "taxa_frete", nullable = false)
 	private BigDecimal TaxaFrete;
 
 	@ManyToOne
-	@JoinColumn(name = "tipo_cozinha_id") // define o nome da coluna foregn key
+	@JoinColumn(name = "tipo_cozinha_id", nullable = false) // define o nome da coluna foregn key
 	private TipoCozinha tipoCozinha;
 
 	public Restaurante(Long uuidRestaurante, String nomeRestaurante, BigDecimal taxaFrete) {

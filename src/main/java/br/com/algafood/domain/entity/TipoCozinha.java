@@ -17,11 +17,11 @@ import lombok.ToString;
 public class TipoCozinha {
 
 	@Id
-	@Column(name = "id")
+	@Column(name = "id", nullable = false)
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long uuidTipoCozinha;
 	
-	@Column(name = "nome_tipo_cozinha", length = 50)
+	@Column(name = "nome_tipo_cozinha", length = 50, nullable = false)
 	private String nomeTipoCozinha;	
 	
 	
