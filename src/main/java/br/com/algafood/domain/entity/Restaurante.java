@@ -8,6 +8,9 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.Getter;
+
+@Getter
 @Entity
 @Table(name = "Restaurante")
 public class Restaurante {
@@ -33,18 +36,6 @@ public class Restaurante {
 		super();
 		this.nomeRestaurante = nomeRestaurante;
 		TaxaFrete = taxaFrete;
-	}
-
-	public UUID getUuidRestaurante() {
-		return uuidRestaurante;
-	}
-
-	public String getNomeRestaurante() {
-		return nomeRestaurante;
-	}
-
-	public BigDecimal getTaxaFrete() {
-		return TaxaFrete;
 	}
 		
 }

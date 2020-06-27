@@ -8,9 +8,10 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import lombok.Builder;
+import lombok.Getter;
 import lombok.ToString;
 
-@Builder @ToString
+@Builder @ToString @Getter
 @Entity
 @Table(name = "tipo_cozinha")
 public class TipoCozinha {
@@ -36,13 +37,5 @@ public class TipoCozinha {
 	}
 
 	public TipoCozinha() {}
-
-	public Long getUuidTipoCozinha() {
-		return uuidTipoCozinha;
-	}
-
-	public String getNomeTipoCozinha() {
-		return nomeTipoCozinha;
-	}
 	
 }
