@@ -1,5 +1,6 @@
 package br.com.algafood.jpa;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.boot.WebApplicationType;
@@ -13,6 +14,9 @@ import br.com.algafood.domain.repository.TipoCozinhaRepository;
 public class TipoCozinhaRepositoryMain {
 	
 	public static void main(String[] args) {
+
+		String data = LocalDateTime.now().toString();
+		System.out.println(data);
 		ApplicationContext context = new SpringApplicationBuilder(AlgafoodApiTreinamentoAlgaworksApplication.class)
 				.web(WebApplicationType.NONE)
 				.run(args);
@@ -34,6 +38,6 @@ public class TipoCozinhaRepositoryMain {
 		TipoCozinha cozinhaChilena = new TipoCozinha(1L,  "Chilena");
 		cozinhaRepository.atualizar(cozinhaChilena);
 		
-		cozinhaRepository.remover(cozinhaChilena);
+		//cozinhaRepository.remover(cozinhaChilena);
 	}
 }

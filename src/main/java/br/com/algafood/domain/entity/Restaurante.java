@@ -1,6 +1,7 @@
 package br.com.algafood.domain.entity;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -29,6 +30,15 @@ public class Restaurante {
 	@Column(name = "taxa_frete", nullable = false)
 	private BigDecimal TaxaFrete;
 
+	@Column(name = "data_cadastro", nullable = false)
+	private LocalDateTime dataCadastro;
+	
+	@Column(name = "data_atualizacao", nullable = false)
+	private LocalDateTime dataAtualizacao;
+	
+	@Column(name = "status", nullable = false)
+	private Boolean isAtivo;
+	
 	@ManyToOne
 	@JoinColumn(name = "tipo_cozinha_id", nullable = false) // define o nome da coluna foregn key
 	private TipoCozinha tipoCozinha;

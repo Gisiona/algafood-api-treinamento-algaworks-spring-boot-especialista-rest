@@ -8,8 +8,8 @@ INSERT INTO tipo_cozinha (nome_tipo_cozinha) VALUES ('Tailandesa');
 INSERT INTO tipo_cozinha (nome_tipo_cozinha) VALUES ('Portuguesa');
 
 
-INSERT INTO restaurante (nome_restaurante, taxa_frete, tipo_cozinha_id) VALUES ('Coco Bambu', 10.90, 4);
-
-INSERT INTO restaurante (nome_restaurante, taxa_frete, tipo_cozinha_id) VALUES ('Chico Bento', 8.90, 1);
-INSERT INTO restaurante (nome_restaurante, taxa_frete, tipo_cozinha_id) VALUES ('Humburginho Americano', 4.90, 5);
+INSERT INTO restaurante (nome_restaurante, taxa_frete, tipo_cozinha_id, data_cadastro, data_atualizacao, status) VALUES ('Coco Bambu', 10.90, 4, '2020-06-27', '2020-06-27', true);
+INSERT INTO restaurante (nome_restaurante, taxa_frete, tipo_cozinha_id, data_cadastro, data_atualizacao, status) VALUES ('Coco Bambu', 10.90, 4, '2020-06-27', '2020-06-27', true);
+INSERT INTO restaurante (nome_restaurante, taxa_frete, tipo_cozinha_id, data_cadastro, data_atualizacao, status) VALUES ('Chico Bento', 8.90, 1, '2020-06-27 16:49:12', '2020-06-27 16:49:12', false);
+INSERT INTO restaurante (nome_restaurante, taxa_frete, tipo_cozinha_id, data_cadastro, data_atualizacao, status) VALUES ('Humburginho Americano', 4.90, 5, '2020-06-27 16:49:12', '2020-06-27 16:49:12', true);
 
