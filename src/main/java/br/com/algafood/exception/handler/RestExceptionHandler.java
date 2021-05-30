@@ -51,7 +51,7 @@ public class RestExceptionHandler {
 	
 	@ExceptionHandler(RecursoNaoPodeSerExcluidoConstraintSqlException.class)
 	public ResponseEntity<?> handlerRecursoNaoPodeSerExcluidoConstraintSqlException(RecursoNaoPodeSerExcluidoConstraintSqlException exc){
-		ResponseException response = new ResponseException(HttpStatus.NOT_ACCEPTABLE.value(), "O recurso não pode ser excluído, pois existem outras dependências.", LocalDateTime.now());		
+		ResponseException response = new ResponseException(HttpStatus.NOT_ACCEPTABLE.value(), "O recurso não pode ser excluído, pois está em uso.", LocalDateTime.now());		
 		return new ResponseEntity<>(response, HttpStatus.NOT_ACCEPTABLE);
 	}
 	
